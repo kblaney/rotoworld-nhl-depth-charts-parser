@@ -44,8 +44,7 @@ final class PlayersSupplier
           }
           final String firstName = getFirstName(line);
           final String lastName = getLastName(line);
-          players.add(new Player(firstName, lastName, teamShortform,
-                positionShortform));
+          players.add(new Player(firstName, lastName, teamShortform, positionShortform));
         }
 
         line = bufferedReader.readLine();

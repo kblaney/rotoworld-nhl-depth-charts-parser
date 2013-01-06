@@ -6,11 +6,10 @@ import java.util.regex.Pattern;
 final class FirstNameLineParser
 {
   // Lines are as follows:
-  //  "RW   1.  Chris Stewart"
-  //  "     5.  David Van der Gulik"
+  // "RW   1.  Chris Stewart"
+  // "     5.  David Van der Gulik"
   //
-  private static final Pattern PATTERN = Pattern.compile(
-        "\\d+\\.\\s+(\\S+)");
+  private static final Pattern PATTERN = Pattern.compile("\\d+\\.\\s+(\\S+)");
   private static final int GROUP_NUM = 1;
 
   public String getFirstName(final String line)

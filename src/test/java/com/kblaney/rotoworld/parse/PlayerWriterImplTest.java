@@ -16,8 +16,7 @@ public final class PlayerWriterImplTest
     final PlayerWriter playerWriter = new PlayerWriterImpl(writer);
     playerWriter.write(player);
     playerWriter.close();
-    assertEquals("Wayne,Gretzky,EDM,F" + System.getProperty("line.separator"),
-          writer.toString());
+    assertEquals("Wayne,Gretzky,EDM,F" + System.getProperty("line.separator"), writer.toString());
   }
 
   @Test

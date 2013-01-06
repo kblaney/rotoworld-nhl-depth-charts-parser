@@ -31,7 +31,7 @@ public final class PlayersWriterTest
   public void write_emptyStringWriter() throws Exception
   {
     final StringWriter stringWriter = new StringWriter();
-    new PlayersWriter(stringWriter).write(Lists.<Player>newArrayList());
+    new PlayersWriter(stringWriter).write(Lists.<Player> newArrayList());
     assertEquals("", stringWriter.toString());
   }
 
@@ -39,7 +39,7 @@ public final class PlayersWriterTest
   public void write_zeroPlayers() throws Exception
   {
     final PlayerWriter playerWriter = mock(PlayerWriter.class);
-    new PlayersWriter(playerWriter).write(Lists.<Player>newArrayList());
+    new PlayersWriter(playerWriter).write(Lists.<Player> newArrayList());
     verify(playerWriter).close();
     verifyNoMoreInteractions(playerWriter);
   }
@@ -59,8 +59,7 @@ public final class PlayersWriterTest
     final Player secondPlayer = new Player("Jari", "Kurri", "EDM", "F");
     final Player thirdPlayer = new Player("Billy", "Smith", "NYI", "G");
     final PlayerWriter playerWriter = mock(PlayerWriter.class);
-    new PlayersWriter(playerWriter).write(Lists.newArrayList(player,
-          secondPlayer, thirdPlayer));
+    new PlayersWriter(playerWriter).write(Lists.newArrayList(player, secondPlayer, thirdPlayer));
     verify(playerWriter).write(player);
     verify(playerWriter).write(secondPlayer);
     verify(playerWriter).write(thirdPlayer);

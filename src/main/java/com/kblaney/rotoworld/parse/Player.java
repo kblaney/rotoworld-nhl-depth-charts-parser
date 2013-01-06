@@ -11,14 +11,13 @@ final class Player
   private final String teamShortform;
   private final String positionShortform;
 
-  public Player(final String firstName, final String lastName,
-        final String teamShortform, final String positionShortform)
+  public Player(final String firstName, final String lastName, final String teamShortform,
+        final String positionShortform)
   {
     this.firstName = ArgAssert.notNull(firstName, "firstName");
     this.lastName = ArgAssert.notNull(lastName, "lastName");
     this.teamShortform = ArgAssert.notNull(teamShortform, "teamShortform");
-    this.positionShortform = ArgAssert.notNull(positionShortform,
-          "positionShortform");
+    this.positionShortform = ArgAssert.notNull(positionShortform, "positionShortform");
   }
 
   public String getFirstName()
@@ -53,10 +52,8 @@ final class Player
       if (thatObject.getClass() == getClass())
       {
         final Player that = (Player) thatObject;
-        return new EqualsBuilder().append(firstName, that.firstName).
-              append(lastName, that.lastName).
-              append(teamShortform, that.teamShortform).
-              append(positionShortform, that.positionShortform).isEquals();
+        return new EqualsBuilder().append(firstName, that.firstName).append(lastName, that.lastName)
+              .append(teamShortform, that.teamShortform).append(positionShortform, that.positionShortform).isEquals();
       }
       else
       {
@@ -68,14 +65,13 @@ final class Player
   @Override
   public int hashCode()
   {
-    return new HashCodeBuilder().append(firstName).append(lastName).
-          append(teamShortform).append(positionShortform).toHashCode();
+    return new HashCodeBuilder().append(firstName).append(lastName).append(teamShortform).append(positionShortform)
+          .toHashCode();
   }
 
   @Override
   public String toString()
   {
-    return firstName + " " + lastName + ":" + positionShortform + ":" +
-          teamShortform;
+    return firstName + " " + lastName + ":" + positionShortform + ":" + teamShortform;
   }
 }

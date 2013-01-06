@@ -86,8 +86,7 @@ public final class PlayerTest
   public void equals_differentFirstName()
   {
     final String differentFirstName = firstName + "A";
-    final Player differentPlayer = new Player(differentFirstName, lastName,
-          teamShortform, positionShortform);
+    final Player differentPlayer = new Player(differentFirstName, lastName, teamShortform, positionShortform);
     assertFalse(player.equals(differentPlayer));
   }
 
@@ -95,8 +94,7 @@ public final class PlayerTest
   public void equals_differentLastName()
   {
     final String differentLastName = lastName + "A";
-    final Player differentPlayer = new Player(firstName, differentLastName,
-          teamShortform, positionShortform);
+    final Player differentPlayer = new Player(firstName, differentLastName, teamShortform, positionShortform);
     assertFalse(player.equals(differentPlayer));
   }
 
@@ -104,8 +102,7 @@ public final class PlayerTest
   public void equals_differentTeamShortform()
   {
     final String differentTeamShortform = teamShortform + "A";
-    final Player differentPlayer = new Player(firstName, lastName,
-          differentTeamShortform, positionShortform);
+    final Player differentPlayer = new Player(firstName, lastName, differentTeamShortform, positionShortform);
     assertFalse(player.equals(differentPlayer));
   }
 
@@ -113,8 +110,7 @@ public final class PlayerTest
   public void equals_differentPositionShortform()
   {
     final String differentPositionShortform = positionShortform + "A";
-    final Player differentPlayer = new Player(firstName, lastName,
-          teamShortform, differentPositionShortform);
+    final Player differentPlayer = new Player(firstName, lastName, teamShortform, differentPositionShortform);
     assertFalse(player.equals(differentPlayer));
   }
 
@@ -127,8 +123,7 @@ public final class PlayerTest
   @Test
   public void equals_equalPlayer()
   {
-    final Player equalPlayer = new Player(firstName, lastName, teamShortform,
-          positionShortform);
+    final Player equalPlayer = new Player(firstName, lastName, teamShortform, positionShortform);
     assertTrue(player.equals(equalPlayer));
   }
 
@@ -141,15 +136,13 @@ public final class PlayerTest
   @Test
   public void hashCode_equalPlayer()
   {
-    final Player equalPlayer = new Player(firstName, lastName, teamShortform,
-          positionShortform);
+    final Player equalPlayer = new Player(firstName, lastName, teamShortform, positionShortform);
     assertEquals(player.hashCode(), equalPlayer.hashCode());
   }
 
   @Test
   public void testToString()
-  {    
-    assertEquals("Wayne Gretzky:F:EDM",
-          new Player("Wayne", "Gretzky", "EDM", "F").toString());
+  {
+    assertEquals("Wayne Gretzky:F:EDM", new Player("Wayne", "Gretzky", "EDM", "F").toString());
   }
 }

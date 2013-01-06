@@ -19,9 +19,7 @@ final class PositionLineParser
     if (m.find())
     {
       final String shortform = m.group(GROUP_NUM);
-      if (shortform.equals("C") ||
-            shortform.equals("RW") ||
-            shortform.equals("LW"))
+      if (shortform.equals("C") || shortform.equals("RW") || shortform.equals("LW"))
       {
         return "F";
       }
