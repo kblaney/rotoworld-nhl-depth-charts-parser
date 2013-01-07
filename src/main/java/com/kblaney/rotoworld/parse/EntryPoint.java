@@ -9,8 +9,14 @@ public final class EntryPoint
 {
   public static void main(final String[] cmdLineArgs) throws IOException
   {
-    final List<Player> players = readPlayersFrom("C:\\hockeypool\\rotoWorldDepthCharts.txt");
-    writePlayers(players, "C:\\hockeypool\\regularSeasonPlayers.csv.txt");
+    final String inputFileSpec = "C:/data/hockeypool/rotoWorldDepthCharts.txt";
+    System.out.println("Reading players from " + inputFileSpec + "...");
+    final List<Player> players = readPlayersFrom(inputFileSpec);
+
+    final String outputFileSpec = "C:/data/hockeypool/regularSeasonPlayers.csv.txt";
+    System.out.println("Writing players to " + outputFileSpec + "...");
+    writePlayers(players, outputFileSpec);
+    System.out.println("Done.");
   }
 
   private static List<Player> readPlayersFrom(final String fileSpec) throws IOException
