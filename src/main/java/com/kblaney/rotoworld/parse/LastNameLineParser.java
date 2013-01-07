@@ -17,11 +17,12 @@ final class LastNameLineParser
     final Matcher m = PATTERN.matcher(line);
     if (m.find())
     {
-      return m.group(GROUP_NUM);
+      final String lastNameWithPossibleTerminatingSpaces = m.group(GROUP_NUM);
+      return lastNameWithPossibleTerminatingSpaces.replaceAll("\\s$", "");
     }
     else
     {
-      throw new IllegalArgumentException("Last name not found in: " + line);
+      throw new IllegalArgumentException("Last name not found in: \"" + line + "\"");
     }
   }
 }

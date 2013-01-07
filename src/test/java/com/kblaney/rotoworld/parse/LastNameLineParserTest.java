@@ -64,6 +64,12 @@ public final class LastNameLineParserTest
   }
 
   @Test
+  public void getLastName_spaceAtEndOfLine()
+  {
+    assertEquals("Gretzky", parser.getLastName("1. Wayne Gretzky "));
+  }
+
+  @Test
   public void getLastName_positionShortform()
   {
     assertEquals("Gretzky", parser.getLastName("C 1. Wayne Gretzky"));
