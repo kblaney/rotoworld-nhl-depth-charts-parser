@@ -6,7 +6,8 @@
    <artifactId>rotoworld-nhl-depth-charts-parser</artifactId>
    <packaging>jar</packaging>
    <version>1.0-SNAPSHOT</version>
-   <name>Rotoworld NHL Depth Charts Parser</name>
+   <name>Kyle Blaney's Rotoworld NHL Depth Charts Parser</name>
+   <description>Kyle Blaney's Rotoworld NHL Depth Charts Parser</description>
    <url>https://github.com/kblaney/rotoworld-nhl-depth-charts-parser</url>
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
