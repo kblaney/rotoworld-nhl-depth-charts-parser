@@ -1,6 +1,6 @@
 package com.kblaney.rotoworld.parse;
 
-import com.kblaney.commons.lang.ArgAssert;
+import com.kblaney.assertions.ArgAssert;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -14,10 +14,10 @@ final class Player
   public Player(final String firstName, final String lastName, final String teamShortform,
         final String positionShortform)
   {
-    this.firstName = ArgAssert.notNull(firstName, "firstName");
-    this.lastName = ArgAssert.notNull(lastName, "lastName");
-    this.teamShortform = ArgAssert.notNull(teamShortform, "teamShortform");
-    this.positionShortform = ArgAssert.notNull(positionShortform, "positionShortform");
+    this.firstName = ArgAssert.assertNotNull(firstName, "firstName");
+    this.lastName = ArgAssert.assertNotNull(lastName, "lastName");
+    this.teamShortform = ArgAssert.assertNotNull(teamShortform, "teamShortform");
+    this.positionShortform = ArgAssert.assertNotNull(positionShortform, "positionShortform");
   }
 
   public String getFirstName()

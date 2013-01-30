@@ -1,7 +1,7 @@
 package com.kblaney.rotoworld.parse;
 
 import com.google.common.collect.Lists;
-import com.kblaney.commons.lang.ArgAssert;
+import com.kblaney.assertions.ArgAssert;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -13,7 +13,7 @@ final class PlayersSupplier
 
   public PlayersSupplier(final Reader reader)
   {
-    this(new BufferedReader(ArgAssert.notNull(reader, "reader")));
+    this(new BufferedReader(ArgAssert.assertNotNull(reader, "reader")));
   }
 
   public PlayersSupplier(final BufferedReader bufferedReader)

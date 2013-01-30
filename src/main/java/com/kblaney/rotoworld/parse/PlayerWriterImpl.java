@@ -1,6 +1,6 @@
 package com.kblaney.rotoworld.parse;
 
-import com.kblaney.commons.lang.ArgAssert;
+import com.kblaney.assertions.ArgAssert;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -11,7 +11,7 @@ final class PlayerWriterImpl implements PlayerWriter
 
   public PlayerWriterImpl(final Writer writer)
   {
-    bufferedWriter = new BufferedWriter(ArgAssert.notNull(writer, "writer"));
+    bufferedWriter = new BufferedWriter(ArgAssert.assertNotNull(writer, "writer"));
   }
 
   public void write(final Player player) throws IOException
