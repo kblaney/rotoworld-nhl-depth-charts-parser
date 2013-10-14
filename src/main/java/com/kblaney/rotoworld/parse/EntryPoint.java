@@ -18,8 +18,8 @@ public final class EntryPoint
 
   public static void main(final String[] cmdLineArgs) throws IOException
   {
-    final List<Player> players = readPlayersFrom("C:/data/hockeypool/rotoWorldDepthCharts-2013-Playoffs.txt");
-    writePlayers(players, "C:/data/hockeypool/players-2013-Playoffs.csv.txt");
+    final List<Player> players = readPlayersFrom("C:/data/hockeypool/rotoWorldDepthCharts.txt");
+    writePlayers(players, "C:/data/hockeypool/players.csv.txt");
     System.out.println("Done.");
   }
 
